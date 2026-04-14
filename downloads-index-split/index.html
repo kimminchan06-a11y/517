@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crypto Commerce | USDT Direct Pay</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+<link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+<header class="sticky top-0 z-50 border-b border-black/5 bg-[rgba(250,248,243,0.86)] backdrop-blur-xl">
+  <div class="shell flex items-center justify-between gap-4 py-4">
+    <a href="#top" class="flex items-center gap-3 text-sm font-semibold text-slate-900">
+      <span class="grid h-11 w-11 place-items-center rounded-2xl bg-slate-950 text-white shadow-lg shadow-slate-950/20">
+        <i data-lucide="coins"></i>
+      </span>
+      <span>
+        Crypto Commerce
+        <span class="block text-xs font-medium text-slate-500">USDT Direct Pay</span>
+      </span>
+    </a>
+
+    <nav class="hidden items-center gap-6 text-sm text-slate-600 md:flex">
+      <a href="#featured" class="hover:text-slate-950">인기 상품</a>
+      <a href="#checkout" class="hover:text-slate-950">결제 안내</a>
+      <a href="#trust" class="hover:text-slate-950">운영 정책</a>
+      <a href="#faq" class="hover:text-slate-950">FAQ</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="#faq" class="rounded-full border border-slate-200 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:bg-white">자주 묻는 질문</a>
+      <a href="#trust" class="rounded-full bg-slate-950 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-800">고객지원 / 정책</a>
+    </div>
+  </div>
+</header>
+
+<main id="top" class="pb-16 pt-8 md:pb-24 md:pt-10">
+  <section class="shell hero-grid">
+    <div class="glass section-card hero-panel p-7 md:p-10">
+      <div class="mb-5 inline-flex rounded-full bg-emerald-50 px-4 py-2 text-sm font-semibold text-emerald-700">
+        USDT Direct Checkout
+      </div>
+
+      <h1 class="max-w-3xl text-4xl font-semibold leading-tight text-slate-950 md:text-6xl">
+        환전 없이 빠르고 안전하게
+        <span class="text-emerald-700">결제하세요</span>
+      </h1>
+
+      <p class="mt-6 max-w-2xl text-base leading-7 text-slate-600 md:text-lg">
+        원하는 상품을 선택하고 USDT로 간편하게 결제하세요.
+        실시간 환율, 지원 네트워크, 주문 진행 상태를 한 화면에서 확인할 수 있어
+        처음 이용하는 고객도 빠르고 편하게 결제를 진행할 수 있습니다.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#featured" class="rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">상품 보기</a>
+        <a href="#checkout" class="rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-800 transition hover:bg-white">결제 흐름 보기</a>
+      </div>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <div class="chip"><i data-lucide="badge-check"></i><span data-quote-window></span></div>
+        <div class="chip"><i data-lucide="wallet"></i><span>지원 네트워크: TRC20 / ERC20</span></div>
+        <div class="chip"><i data-lucide="message-square"></i><span>입금 확인 후 주문 확정</span></div>
+      </div>
+    </div>
+
+    <aside class="glass section-card p-6 md:p-7">
+      <div class="rounded-[24px] bg-slate-950 p-6 text-white">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <p class="text-sm font-medium text-emerald-300">Live Rate</p>
+            <h2 class="mt-2 text-2xl font-semibold">결제 전에 꼭 확인하세요</h2>
+          </div>
+          <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">Live</span>
+        </div>
+
+        <div class="mt-6 rounded-3xl bg-white/6 p-5">
+          <p class="text-sm text-white/70">실시간 참고 환율</p>
+          <p class="mt-2 text-3xl font-semibold" data-reference-rate></p>
+          <p class="mt-2 text-xs text-white/50" data-rate-meta>실시간 환율을 불러오는 중...</p>
+          <p class="mt-3 text-sm leading-6 text-white/70">
+            실제 결제 금액은 체크아웃 단계에서 최종 확정됩니다.
+            결제 전 실시간 참고 환율과 견적 고정 시간을 함께 확인해 주세요.
+          </p>
+        </div>
+
+        <ul class="feature-list mt-6 space-y-4 text-sm leading-6 text-white/80">
+          <li>체크아웃에서 상품별 최종 결제 금액과 전송 주소를 다시 확인할 수 있습니다.</li>
+          <li>지원 네트워크를 명확하게 안내해 오송금 위험을 줄였습니다.</li>
+          <li>입금 후 주문 상태를 순서대로 확인할 수 있어 진행 상황이 명확합니다.</li>
+        </ul>
+      </div>
+    </aside>
+  </section>
+
+  <section class="shell mt-8 grid gap-4 md:grid-cols-4">
+    <article class="glass section-card p-5">
+      <div class="mb-3 inline-flex rounded-2xl bg-emerald-50 p-3 text-emerald-700">
+        <i data-lucide="clock-3"></i>
+      </div>
+      <p class="text-sm font-semibold text-slate-900">견적 고정 시간</p>
+      <p class="mt-2 text-sm leading-6 text-slate-600">실시간 시세를 반영한 결제 금액을 일정 시간 동안 고정해 안내합니다.</p>
+    </article>
+    <article class="glass section-card p-5">
+      <div class="mb-3 inline-flex rounded-2xl bg-amber-50 p-3 text-amber-700">
+        <i data-lucide="network"></i>
+      </div>
+      <p class="text-sm font-semibold text-slate-900">지원 네트워크 구분</p>
+      <p class="mt-2 text-sm leading-6 text-slate-600">TRC20과 ERC20 지원 여부를 명확하게 표시해 결제를 더 안전하게 돕습니다.</p>
+    </article>
+    <article class="glass section-card p-5">
+      <div class="mb-3 inline-flex rounded-2xl bg-sky-50 p-3 text-sky-700">
+        <i data-lucide="shield-check"></i>
+      </div>
+      <p class="text-sm font-semibold text-slate-900">안심 결제 안내</p>
+      <p class="mt-2 text-sm leading-6 text-slate-600">결제 전 확인해야 할 핵심 정보를 정리해 처음 방문한 고객도 쉽게 이해할 수 있습니다.</p>
+    </article>
+    <article class="glass section-card p-5">
+      <div class="mb-3 inline-flex rounded-2xl bg-rose-50 p-3 text-rose-700">
+        <i data-lucide="receipt"></i>
+      </div>
+      <p class="text-sm font-semibold text-slate-900">주문 상태 확인</p>
+      <p class="mt-2 text-sm leading-6 text-slate-600">입금 확인부터 주문 확정까지 진행 상황을 한눈에 확인할 수 있습니다.</p>
+    </article>
+  </section>
+
+  <section id="featured" class="shell mt-14">
+    <div class="mb-6 flex items-end justify-between gap-4">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-emerald-700">Featured</p>
+        <h2 class="mt-2 text-3xl font-semibold text-slate-950">인기 상품</h2>
+        <p class="mt-3 text-sm leading-6 text-slate-600">
+          실시간 참고 환율을 바탕으로 KRW 가격과 예상 USDT 결제 금액을 함께 확인할 수 있습니다.
+        </p>
+      </div>
+      <div class="hidden items-center gap-3 md:flex">
+        <button type="button" aria-label="이전 상품 보기" data-carousel-prev class="rounded-full border border-slate-300 bg-white p-3 text-slate-900 transition hover:border-slate-400 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40">
+          <i data-lucide="chevron-left"></i>
+        </button>
+        <button type="button" aria-label="다음 상품 보기" data-carousel-next class="rounded-full border border-slate-300 bg-white p-3 text-slate-900 transition hover:border-slate-400 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40">
+          <i data-lucide="chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="product-rail" data-carousel-rail>
+      <article class="product-card glass section-card p-4 md:p-5" data-product-card data-krw="1349000" data-old-krw="1499000">
+        <div class="thumb flex items-end justify-between rounded-[26px] bg-gradient-to-br from-slate-950 via-slate-800 to-emerald-700 p-6 text-white">
+          <div class="space-y-2">
+            <span class="inline-flex rounded-full bg-white/12 px-3 py-1 text-xs font-medium text-white/85">즉시 견적 가능</span>
+            <p class="text-sm text-white/70">USDT 결제</p>
+          </div>
+          <div class="thumb-icon text-slate-950">
+            <i data-lucide="smartphone"></i>
+          </div>
+        </div>
+        <div class="mt-5 flex items-start justify-between gap-3">
+          <div>
+            <h3 class="text-lg font-semibold text-slate-950">iPhone 15 Pro</h3>
+            <p class="mt-1 text-sm text-slate-500">프리미엄 스마트폰을 USDT로 빠르게 결제하세요.</p>
+          </div>
+          <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700" data-savings></span>
+        </div>
+        <div class="mt-4 rounded-3xl bg-slate-50 px-4 py-3">
+          <p class="text-xs text-slate-400 line-through" data-old></p>
+          <p class="mt-1 text-xl font-semibold text-slate-950" data-price></p>
+          <p class="mt-1 text-sm font-medium text-emerald-700" data-usdt></p>
+        </div>
+        <a href="#checkout" class="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-slate-950 px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">결제 단계 확인</a>
+      </article>
+
+      <article class="product-card glass section-card p-4 md:p-5" data-product-card data-krw="809000" data-old-krw="899000">
+        <div class="thumb flex items-end justify-between rounded-[26px] bg-gradient-to-br from-cyan-700 via-sky-600 to-slate-900 p-6 text-white">
+          <div class="space-y-2">
+            <span class="inline-flex rounded-full bg-white/12 px-3 py-1 text-xs font-medium text-white/85">재고 문의 가능</span>
+            <p class="text-sm text-white/70">USDT 결제</p>
+          </div>
+          <div class="thumb-icon text-slate-950">
+            <i data-lucide="tablet"></i>
+          </div>
+        </div>
+        <div class="mt-5 flex items-start justify-between gap-3">
+          <div>
+            <h3 class="text-lg font-semibold text-slate-950">iPad Air</h3>
+            <p class="mt-1 text-sm text-slate-500">가벼운 작업과 엔터테인먼트를 위한 인기 태블릿.</p>
+          </div>
+          <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700" data-savings></span>
+        </div>
+        <div class="mt-4 rounded-3xl bg-slate-50 px-4 py-3">
+          <p class="text-xs text-slate-400 line-through" data-old></p>
+          <p class="mt-1 text-xl font-semibold text-slate-950" data-price></p>
+          <p class="mt-1 text-sm font-medium text-emerald-700" data-usdt></p>
+        </div>
+        <a href="#checkout" class="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-slate-950 px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">결제 단계 확인</a>
+      </article>
+
+      <article class="product-card glass section-card p-4 md:p-5" data-product-card data-krw="1529000" data-old-krw="1699000">
+        <div class="thumb flex items-end justify-between rounded-[26px] bg-gradient-to-br from-amber-500 via-orange-500 to-slate-900 p-6 text-white">
+          <div class="space-y-2">
+            <span class="inline-flex rounded-full bg-white/12 px-3 py-1 text-xs font-medium text-white/85">실시간 금액 반영</span>
+            <p class="text-sm text-white/70">USDT 결제</p>
+          </div>
+          <div class="thumb-icon text-slate-950">
+            <i data-lucide="laptop"></i>
+          </div>
+        </div>
+        <div class="mt-5 flex items-start justify-between gap-3">
+          <div>
+            <h3 class="text-lg font-semibold text-slate-950">MacBook Air</h3>
+            <p class="mt-1 text-sm text-slate-500">실시간 시세 기준으로 예상 결제 금액을 확인할 수 있습니다.</p>
+          </div>
+          <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700" data-savings></span>
+        </div>
+        <div class="mt-4 rounded-3xl bg-slate-50 px-4 py-3">
+          <p class="text-xs text-slate-400 line-through" data-old></p>
+          <p class="mt-1 text-xl font-semibold text-slate-950" data-price></p>
+          <p class="mt-1 text-sm font-medium text-emerald-700" data-usdt></p>
+        </div>
+        <a href="#checkout" class="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-slate-950 px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">결제 단계 확인</a>
+      </article>
+
+      <article class="product-card glass section-card p-4 md:p-5" data-product-card data-krw="1439000" data-old-krw="1599000">
+        <div class="thumb flex items-end justify-between rounded-[26px] bg-gradient-to-br from-violet-700 via-indigo-700 to-slate-900 p-6 text-white">
+          <div class="space-y-2">
+            <span class="inline-flex rounded-full bg-white/12 px-3 py-1 text-xs font-medium text-white/85">빠른 주문 가능</span>
+            <p class="text-sm text-white/70">USDT 결제</p>
+          </div>
+          <div class="thumb-icon text-slate-950">
+            <i data-lucide="smartphone"></i>
+          </div>
+        </div>
+        <div class="mt-5 flex items-start justify-between gap-3">
+          <div>
+            <h3 class="text-lg font-semibold text-slate-950">Galaxy S24 Ultra</h3>
+            <p class="mt-1 text-sm text-slate-500">강력한 성능과 선명한 디스플레이를 담은 플래그십 모델.</p>
+          </div>
+          <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700" data-savings></span>
+        </div>
+        <div class="mt-4 rounded-3xl bg-slate-50 px-4 py-3">
+          <p class="text-xs text-slate-400 line-through" data-old></p>
+          <p class="mt-1 text-xl font-semibold text-slate-950" data-price></p>
+          <p class="mt-1 text-sm font-medium text-emerald-700" data-usdt></p>
+        </div>
+        <a href="#checkout" class="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-slate-950 px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">결제 단계 확인</a>
+      </article>
+
+      <article class="product-card glass section-card p-4 md:p-5" data-product-card data-krw="989000" data-old-krw="1099000">
+        <div class="thumb flex items-end justify-between rounded-[26px] bg-gradient-to-br from-emerald-700 via-teal-700 to-slate-900 p-6 text-white">
+          <div class="space-y-2">
+            <span class="inline-flex rounded-full bg-white/12 px-3 py-1 text-xs font-medium text-white/85">합리적 USDT 견적</span>
+            <p class="text-sm text-white/70">USDT 결제</p>
+          </div>
+          <div class="thumb-icon text-slate-950">
+            <i data-lucide="monitor"></i>
+          </div>
+        </div>
+        <div class="mt-5 flex items-start justify-between gap-3">
+          <div>
+            <h3 class="text-lg font-semibold text-slate-950">Galaxy Tab S9</h3>
+            <p class="mt-1 text-sm text-slate-500">합리적인 가격으로 즐기는 프리미엄 태블릿 경험.</p>
+          </div>
+          <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700" data-savings></span>
+        </div>
+        <div class="mt-4 rounded-3xl bg-slate-50 px-4 py-3">
+          <p class="text-xs text-slate-400 line-through" data-old></p>
+          <p class="mt-1 text-xl font-semibold text-slate-950" data-price></p>
+          <p class="mt-1 text-sm font-medium text-emerald-700" data-usdt></p>
+        </div>
+        <a href="#checkout" class="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-slate-950 px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">결제 단계 확인</a>
+      </article>
+    </div>
+
+    <div class="mt-4 flex justify-center gap-3 md:hidden">
+      <button type="button" aria-label="이전 상품 보기" data-carousel-prev class="rounded-full border border-slate-300 bg-white p-3 text-slate-900 transition hover:border-slate-400 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40">
+        <i data-lucide="chevron-left"></i>
+      </button>
+      <button type="button" aria-label="다음 상품 보기" data-carousel-next class="rounded-full border border-slate-300 bg-white p-3 text-slate-900 transition hover:border-slate-400 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40">
+        <i data-lucide="chevron-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <section class="shell mt-16">
+    <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+      <div class="glass section-card p-6 md:p-8">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.16em] text-amber-600">Hot deals</p>
+            <h2 class="mt-2 text-3xl font-semibold text-slate-950">오늘의 특가</h2>
+            <p class="mt-3 text-sm leading-6 text-slate-600">
+              실시간 참고 환율을 기준으로 오늘 주목할 만한 혜택을 한곳에 모았습니다.
+            </p>
+          </div>
+          <button type="button" data-toggle-deals class="shrink-0 rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">
+            특가 더 보기
+          </button>
+        </div>
+
+        <div class="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          <article class="glass rounded-[24px] p-4" data-product-card data-krw="299000" data-old-krw="359000">
+            <div class="mb-4 inline-flex rounded-2xl bg-rose-50 p-3 text-rose-700"><i data-lucide="headphones"></i></div>
+            <h3 class="text-base font-semibold text-slate-950">AirPods</h3>
+            <p class="mt-1 text-sm text-slate-500">매일 사용하는 인기 무선 이어폰.</p>
+            <div class="mt-4">
+              <p class="text-xs text-slate-400 line-through" data-old></p>
+              <p class="mt-1 font-semibold text-slate-900" data-price></p>
+              <p class="mt-1 text-sm font-medium text-emerald-700" data-usdt></p>
+            </div>
+          </article>
+
+          <article class="glass rounded-[24px] p-4" data-product-card data-krw="169000" data-old-krw="199000">
+            <div class="mb-4 inline-flex rounded-2xl bg-sky-50 p-3 text-sky-700"><i data-lucide="headphones"></i></div>
+            <h3 class="text-base font-semibold text-slate-950">Buds 2</h3>
+            <p class="mt-1 text-sm text-slate-500">가볍고 편안한 데일리 무선 이어버드.</p>
+            <div class="mt-4">
+              <p class="text-xs text-slate-400 line-through" data-old></p>
+              <p class="mt-1 font-semibold text-slate-900" data-price></p>
+              <p class="mt-1 text-sm font-medium text-emerald-700" data-usdt></p>
+            </div>
+          </article>
+
+          <article class="glass rounded-[24px] p-4" data-product-card data-krw="129000" data-old-krw="149000">
+            <div class="mb-4 inline-flex rounded-2xl bg-amber-50 p-3 text-amber-700"><i data-lucide="keyboard"></i></div>
+            <h3 class="text-base font-semibold text-slate-950">Keyboard</h3>
+            <p class="mt-1 text-sm text-slate-500">심플한 작업 환경을 위한 베스트셀러 키보드.</p>
+            <div class="mt-4">
+              <p class="text-xs text-slate-400 line-through" data-old></p>
+              <p class="mt-1 font-semibold text-slate-900" data-price></p>
+              <p class="mt-1 text-sm font-medium text-emerald-700" data-usdt></p>
+            </div>
+          </article>
+
+          <article class="glass rounded-[24px] p-4" data-product-card data-krw="119000" data-old-krw="139000">
+            <div class="mb-4 inline-flex rounded-2xl bg-emerald-50 p-3 text-emerald-700"><i data-lucide="mouse"></i></div>
+            <h3 class="text-base font-semibold text-slate-950">Mouse</h3>
+            <p class="mt-1 text-sm text-slate-500">기본기 탄탄한 무선 마우스 특가.</p>
+            <div class="mt-4">
+              <p class="text-xs text-slate-400 line-through" data-old></p>
+              <p class="mt-1 font-semibold text-slate-900" data-price></p>
+              <p class="mt-1 text-sm font-medium text-emerald-700" data-usdt></p>
+            </div>
+          </article>
+
+          <article class="glass rounded-[24px] p-4" data-product-card data-krw="349000" data-old-krw="399000">
+            <div class="mb-4 inline-flex rounded-2xl bg-violet-50 p-3 text-violet-700"><i data-lucide="speaker"></i></div>
+            <h3 class="text-base font-semibold text-slate-950">Beats Speaker</h3>
+            <p class="mt-1 text-sm text-slate-500">풍부한 사운드를 담은 포터블 스피커.</p>
+            <div class="mt-4">
+              <p class="text-xs text-slate-400 line-through" data-old></p>
+              <p class="mt-1 font-semibold text-slate-900" data-price></p>
+              <p class="mt-1 text-sm font-medium text-emerald-700" data-usdt></p>
+            </div>
+          </article>
+
+          <article class="glass rounded-[24px] p-4" data-product-card data-krw="389000" data-old-krw="429000">
+            <div class="mb-4 inline-flex rounded-2xl bg-slate-100 p-3 text-slate-700"><i data-lucide="watch"></i></div>
+            <h3 class="text-base font-semibold text-slate-950">Smart Watch</h3>
+            <p class="mt-1 text-sm text-slate-500">운동과 일상을 함께 챙기는 스마트 워치.</p>
+            <div class="mt-4">
+              <p class="text-xs text-slate-400 line-through" data-old></p>
+              <p class="mt-1 font-semibold text-slate-900" data-price></p>
+              <p class="mt-1 text-sm font-medium text-emerald-700" data-usdt></p>
+            </div>
+          </article>
+
+          <article class="glass hidden rounded-[24px] p-4" data-extra-deal data-product-card data-krw="169000" data-old-krw="199000">
+            <div class="mb-4 inline-flex rounded-2xl bg-indigo-50 p-3 text-indigo-700"><i data-lucide="speaker"></i></div>
+            <h3 class="text-base font-semibold text-slate-950">Portable Speaker</h3>
+            <p class="mt-1 text-sm text-slate-500">어디서든 즐기는 콤팩트 오디오.</p>
+            <div class="mt-4">
+              <p class="text-xs text-slate-400 line-through" data-old></p>
+              <p class="mt-1 font-semibold text-slate-900" data-price></p>
+              <p class="mt-1 text-sm font-medium text-emerald-700" data-usdt></p>
+            </div>
+          </article>
+
+          <article class="glass hidden rounded-[24px] p-4" data-extra-deal data-product-card data-krw="49000" data-old-krw="59000">
+            <div class="mb-4 inline-flex rounded-2xl bg-lime-50 p-3 text-lime-700"><i data-lucide="battery-charging"></i></div>
+            <h3 class="text-base font-semibold text-slate-950">Fast Charger</h3>
+            <p class="mt-1 text-sm text-slate-500">일상에서 바로 쓰기 좋은 필수 충전 액세서리.</p>
+            <div class="mt-4">
+              <p class="text-xs text-slate-400 line-through" data-old></p>
+              <p class="mt-1 font-semibold text-slate-900" data-price></p>
+              <p class="mt-1 text-sm font-medium text-emerald-700" data-usdt></p>
+            </div>
+          </article>
+
+          <article class="glass hidden rounded-[24px] p-4" data-extra-deal data-product-card data-krw="89000" data-old-krw="109000">
+            <div class="mb-4 inline-flex rounded-2xl bg-fuchsia-50 p-3 text-fuchsia-700"><i data-lucide="cable"></i></div>
+            <h3 class="text-base font-semibold text-slate-950">Premium Cable Kit</h3>
+            <p class="mt-1 text-sm text-slate-500">다양한 기기에 맞춰 쓰는 프리미엄 케이블 세트.</p>
+            <div class="mt-4">
+              <p class="text-xs text-slate-400 line-through" data-old></p>
+              <p class="mt-1 font-semibold text-slate-900" data-price></p>
+              <p class="mt-1 text-sm font-medium text-emerald-700" data-usdt></p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <aside id="trust" class="glass section-card p-6 md:p-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">Trust & Policy</p>
+        <h2 class="mt-2 text-3xl font-semibold text-slate-950">안심 결제를 위한 안내</h2>
+        <ul class="policy-list mt-6 space-y-4 text-sm leading-7 text-slate-600">
+          <li>실시간 참고 환율을 바탕으로 예상 결제 금액을 확인할 수 있습니다.</li>
+          <li>최종 결제 금액과 전송 주소는 체크아웃 단계에서 다시 안내됩니다.</li>
+          <li>지원 네트워크를 분명하게 표시해 안전한 결제를 도와드립니다.</li>
+          <li>입금 후 주문 상태를 확인하고 필요한 경우 고객지원으로 문의할 수 있습니다.</li>
+        </ul>
+
+        <div class="mt-7 rounded-[26px] bg-slate-950 p-5 text-white">
+          <p class="text-sm font-semibold text-emerald-300">주문 전 확인 사항</p>
+          <div class="mt-4 space-y-3 text-sm text-white/75">
+            <p>실시간 참고 환율과 예상 결제 금액을 확인해 주세요.</p>
+            <p>지원 네트워크와 전송 주소는 체크아웃에서 다시 확인해 주세요.</p>
+            <p>입금 후 주문 상태는 순서대로 업데이트됩니다.</p>
+            <p>결제 중 문제가 생기면 고객지원을 통해 빠르게 확인할 수 있습니다.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="checkout" class="shell mt-16">
+    <div class="glass section-card p-6 md:p-8">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-emerald-700">Checkout guide</p>
+        <h2 class="mt-2 text-3xl font-semibold text-slate-950">USDT 결제는 이렇게 진행됩니다</h2>
+        <p class="mt-4 text-sm leading-7 text-slate-600">
+          주문부터 결제 완료까지 단계를 명확하게 안내해
+          처음 이용하는 고객도 흐름을 쉽게 이해할 수 있도록 구성했습니다.
+        </p>
+      </div>
+
+      <div class="mt-8 grid gap-4 lg:grid-cols-5">
+        <article class="rounded-[24px] border border-slate-200 bg-white p-5">
+          <p class="text-sm font-semibold text-emerald-700">Step 1</p>
+          <h3 class="mt-2 font-semibold text-slate-950">상품 선택</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-600">상품과 수량을 고른 뒤 체크아웃으로 이동합니다.</p>
+        </article>
+        <article class="rounded-[24px] border border-slate-200 bg-white p-5">
+          <p class="text-sm font-semibold text-emerald-700">Step 2</p>
+          <h3 class="mt-2 font-semibold text-slate-950">네트워크 확인</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-600">TRC20, ERC20 중 지원되는 체인과 주소를 명확히 확인합니다.</p>
+        </article>
+        <article class="rounded-[24px] border border-slate-200 bg-white p-5">
+          <p class="text-sm font-semibold text-emerald-700">Step 3</p>
+          <h3 class="mt-2 font-semibold text-slate-950">견적 고정</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-600">기준 환율과 수수료를 반영한 최종 금액이 일정 시간 동안 유지됩니다.</p>
+        </article>
+        <article class="rounded-[24px] border border-slate-200 bg-white p-5">
+          <p class="text-sm font-semibold text-emerald-700">Step 4</p>
+          <h3 class="mt-2 font-semibold text-slate-950">USDT 전송</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-600">주소와 금액을 정확히 복사해서 전송하고 TXID를 저장합니다.</p>
+        </article>
+        <article class="rounded-[24px] border border-slate-200 bg-white p-5">
+          <p class="text-sm font-semibold text-emerald-700">Step 5</p>
+          <h3 class="mt-2 font-semibold text-slate-950">주문 확정</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-600">입금 확인 후 주문 상태가 순서대로 업데이트됩니다.</p>
+        </article>
+      </div>
+
+      <div class="mt-8 rounded-[28px] border border-amber-200 bg-amber-50 p-6">
+        <div class="flex items-start gap-4">
+          <div class="mt-1 inline-flex rounded-2xl bg-amber-100 p-3 text-amber-700">
+            <i data-lucide="triangle-alert"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-slate-950">결제 전 확인해 주세요</h3>
+            <ul class="policy-list mt-4 space-y-3 text-sm leading-7 text-slate-700">
+              <li>결제 전 체크아웃 화면에서 최종 금액과 전송 주소를 다시 확인해 주세요.</li>
+              <li>지원되지 않는 네트워크로 전송할 경우 주문 확인이 지연될 수 있습니다.</li>
+              <li>입금 후 주문 상태가 바로 갱신되지 않으면 고객지원으로 문의해 주세요.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="shell mt-16">
+    <div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+      <div class="glass section-card p-6 md:p-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">FAQ</p>
+        <h2 class="mt-2 text-3xl font-semibold text-slate-950">자주 묻는 질문</h2>
+        <p class="mt-4 text-sm leading-7 text-slate-600">
+          결제 전에 가장 자주 확인하는 내용을 미리 정리했습니다.
+          필요한 정보를 빠르게 확인하고 편하게 주문을 진행해 보세요.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <details class="faq-card glass section-card p-5">
+          <summary class="flex cursor-pointer items-center justify-between gap-4">
+            <span class="font-semibold text-slate-950">결제 금액은 언제 확정되나요?</span>
+            <i data-lucide="plus"></i>
+          </summary>
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            메인 페이지에서는 실시간 참고 환율 기준 예상 금액을 안내하며,
+            최종 결제 금액은 체크아웃 단계에서 확정됩니다.
+          </p>
+        </details>
+
+        <details class="faq-card glass section-card p-5">
+          <summary class="flex cursor-pointer items-center justify-between gap-4">
+            <span class="font-semibold text-slate-950">어떤 네트워크로 결제할 수 있나요?</span>
+            <i data-lucide="plus"></i>
+          </summary>
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            현재 지원 네트워크는 TRC20과 ERC20이며,
+            상품별 결제 단계에서 전송 주소와 함께 다시 확인할 수 있습니다.
+          </p>
+        </details>
+
+        <details class="faq-card glass section-card p-5">
+          <summary class="flex cursor-pointer items-center justify-between gap-4">
+            <span class="font-semibold text-slate-950">입금 후 주문은 어떻게 확인하나요?</span>
+            <i data-lucide="plus"></i>
+          </summary>
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            입금이 확인되면 주문 상태가 순서대로 업데이트되며,
+            진행이 지연될 경우 고객지원으로 바로 문의할 수 있습니다.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="shell pb-12 pt-8 text-sm text-slate-500">
+  <div class="glass section-card flex flex-col gap-4 px-6 py-5 md:flex-row md:items-center md:justify-between">
+    <div>
+      <p class="font-semibold text-slate-900">Crypto Commerce</p>
+      <p class="mt-1">실시간 참고 환율과 명확한 결제 안내를 바탕으로 빠르고 간편한 USDT 결제를 제공합니다.</p>
+    </div>
+    <p>© <span id="year"></span> Crypto Commerce</p>
+  </div>
+</footer>
+
+<script src="./app.js"></script>
+</body>
+</html>
